@@ -49,13 +49,13 @@ result will be revealed in console like:
 
 - DFS
 ```objc
-  [root bfsWithBlock:^(id<RWTreeNode> currentNode, NSIndexPath *indexPath, BOOL *stop) {
+  [root dfsWithBlock:^(id<RWTreeNode> currentNode, NSIndexPath *indexPath, BOOL *stop) {
     NSLog([currentNode description]);
   }];
 ```
 - BFS
 ```objc
-  [root dfsWithBlock:^(id<RWTreeNode> currentNode, NSIndexPath *indexPath, BOOL *stop) {
+  [root bfsWithBlock:^(id<RWTreeNode> currentNode, NSIndexPath *indexPath, BOOL *stop) {
     NSLog([currentNode description]);
   }];
 ```
@@ -81,4 +81,4 @@ Some other interface for tree node operation based on index:
 - (void) insertChild:(id<RWTreeNode>)child atIndexPath:(NSIndexPath*) indexPath;
 ```
 
-## Issue
+## Issues
